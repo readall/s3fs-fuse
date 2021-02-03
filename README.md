@@ -20,6 +20,20 @@ tools like [AWS CLI](https://github.com/aws/aws-cli).
 * user-specified regions, including Amazon GovCloud
 * authenticate via v2 or v4 signatures
 
+## Use it with Scaleway cloud provider
+For this to be used with Scaleway S3 compatible object store, there is a need to create binary that works with current limitations of Scaleway.
+For that we need to build the binary ourselves. One of the ways in which we can build is already described, but I did not have that setup possible.
+So I went the gitpod.io way. That required creating a small docker image with all the dependencies needed for the build.
+If you can here looking to solve similar situation, then you can directly launch this workspace in gitpot.io and follow the following
+
+* build
+After the workspace starts in gitpod simply use make
+make install
+Unfortuantely it will fail to copy the binaries, but the build actually works. You will fing the s3fs binary in src directory
+cd src 
+cp s3fs <destination>
+You have the binary and ready to use
+
 ## Installation
 
 Many systems provide pre-built packages:
