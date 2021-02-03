@@ -11,5 +11,5 @@ RUN sudo apt-get update \
     libssl-dev \
     libxml2-dev \
     make \
-    pkg-config
+    pkg-config \
  && sudo rm -rf /var/lib/apt/lists/*
