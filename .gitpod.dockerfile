@@ -10,5 +10,6 @@ RUN sudo apt-get update \
     libfuse-dev \
     libssl-dev \
     libxml2-dev \
-    make pkg-config
+    make \
+    pkg-config
  && sudo rm -rf /var/lib/apt/lists/*
